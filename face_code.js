@@ -17,11 +17,11 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   const bg_color3 = [71, 222, 219];
   const fg_color3 = [255, 93, 35];
 
-  let headSize = 20
-  let eyeSize = 5;
+  let headSize = 10
+  let eyeSize = 2;
   let centerX = 0;
   let Iy = -4
-  let distactBetweenEyes = 5
+  let distactBetweenEyes = 3
   let MouthDrop = 7
   
   // rotation in degrees
@@ -46,9 +46,6 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
     ellipse(centerX + distactBetweenEyes, Iy, eyeSize );
   }
 
-  // mouth
-  fill(bg_color3);
-  ellipse(centerX, Iy + MouthDrop, distactBetweenEyes, mouth_value);
 }
 
 
@@ -76,6 +73,6 @@ function blockyFace(thinness_value) {
 
   // eyes
   fill(234, 122, 244);
-  ellipse(-2, -4, 1);
-  ellipse( 2, -4, 1);
+  ellipse(-2, 10, 1);
+  ellipse( 2, 10, 1);
 }
