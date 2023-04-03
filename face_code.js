@@ -43,9 +43,11 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   if (eye_value >= 2) {
     fill(bg_color3);
     ellipse(centerX - distactBetweenEyes, Iy, eyeSize);
-    ellipse(centerX + distactBetweenEyes, Iy, eyeSize );
+    ellipse(centerX + distactBetweenEyes, Iy, eyeSize);
   }
 
+  /// Shroom head
+  
 }
 
 
