@@ -14,15 +14,14 @@
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
 function orangeAlienFace(tilt_value, eye_value, mouth_value) {
-  const bg_color3 = [218, 220, 237]; ///eyes
-  const fg_color3 = [16, 18, 38]; ///face
+  const bg_color3 = [231, 237, 123]; ///eyes
+  const fg_color3 = [64, 39, 38]; ///face
 
   let headSize = 10
   let eyeSize = 2;
   let centerX = 0;
-  let Iy = -1
+  let Iy = 3
   let distactBetweenEyes = 2
-  let MouthDrop = 7
   
   // rotation in degrees
   angleMode(DEGREES);
@@ -31,7 +30,7 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
  // head
   noStroke();
   fill(fg_color3);
-  ellipse(centerX, 0, headSize, headSize);
+  ellipse(centerX, Iy, headSize, headSize);
 
   // 2 traditonal eyes
   if (eye_value === 1 || eye_value == 3) {
@@ -46,8 +45,21 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
     ellipse(centerX + distactBetweenEyes, Iy, eyeSize);
   }
 
-  /// Shroom head
-  
+  ///shrom top dots to know where to place the cruves///
+  /// dots (placements) for a shroom head round ///
+   fill(250, 163, 105) /// orange
+  ellipse(0, 0, 1, 1); /// middle bottom
+
+  //left down to up
+  ellipse(-3, 0, 1, 1); ///  bottom
+  ellipse(-6, 0, 1, 1); ///  bottom
+  ellipse(-9, 0, 1, 1); ///  bottom
+  ellipse(-12, -1, 1, 1); ///  bottom
+  ellipse(-11, -4, 1, 1); ///  bottom
+  ellipse(-7, -5, 1, 1); ///  bottom
+  ellipse(-5, -7, 1, 1); ///  bottom
+
+
 }
 
 
