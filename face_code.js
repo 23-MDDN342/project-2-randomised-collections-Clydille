@@ -20,7 +20,7 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   let headSize = 10
   let eyeSize = 2;
   let centerX = 0;
-  let Iy = 3
+  let Iy = 4
   let distactBetweenEyes = 2
   
   // rotation in degrees
@@ -48,17 +48,21 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   ///shrom top dots to know where to place the cruves///
   /// dots (placements) for a shroom head round ///
    fill(250, 163, 105) /// orange
-  ellipse(0, 0, 1, 1); /// middle bottom
+
+ ellipse(0, 1, 1, 1); /// middle bottom
 
   //left down to up
-  ellipse(-3, 0, 1, 1); ///  bottom
-  ellipse(-6, 0, 1, 1); ///  bottom
-  ellipse(-9, 0, 1, 1); ///  bottom
-  ellipse(-12, -1, 1, 1); ///  bottom
-  ellipse(-11, -4, 1, 1); ///  bottom
-  ellipse(-7, -5, 1, 1); ///  bottom
-  ellipse(-5, -7, 1, 1); ///  bottom
-
+  ellipse(-2, 1, 1, 1); ///  bottom
+  ellipse(-4.5, 1, 1, 1); ///  bottom
+  ellipse(-7, 0.5, 1, 1); ///  bottom
+  ellipse(-9, -1, 1, 1); ///  bottom
+  ellipse(-10, -3, 1, 1); ///  bottom
+  ellipse(-10.5, -5.5, 1, 1); ///  bottom
+  ellipse(-9.5, -8, 1, 1); ///  bottom
+  ellipse(-7.5, -9.5, 1, 1); ///  bottom
+  ellipse(-4.5, -10.5, 1, 1); ///  bottom
+  ellipse(-2, -11, 1, 1); ///  bottom
+  ellipse(-2, -11, 1, 1); ///  bottom
 
 }
 
