@@ -62,7 +62,7 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   ellipse(-7.5, -9.5, 1, 1); ///  bottom
   ellipse(-4.5, -10.5, 1, 1); ///  bottom
   ellipse(-2, -11, 1, 1); ///  bottom
-  ellipse(-2, -11, 1, 1); ///  bottom
+  ellipse(0, -11, 1, 1); ///  bottom
 
 }
 
