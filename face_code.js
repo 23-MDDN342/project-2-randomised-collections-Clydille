@@ -13,7 +13,7 @@
  * eye_value is an integer number of eyes: either 0, 1, 2, or 3
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
-function orangeAlienFace(tilt_value, eye_value, mouth_value) {
+function orangeAlienFace(tilt_value, eye_value) {
   const bg_color3 = [231, 237, 123]; ///eyes
   const fg_color3 = [64, 39, 38]; ///face
 
@@ -35,55 +35,35 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   // 2 traditonal eyes
   if (eye_value === 1 || eye_value == 3) {
     fill(bg_color3);
-    ellipse(centerX, Iy, eyeSize-3,eyeSize);
+    ellipse(centerX2, Iy, eyeSize, eyeSize);
    
   }
 // middle eye
   if (eye_value >= 2) {
     fill(bg_color3);
-    ellipse(centerX - distactBetweenEyes, Iy, eyeSize);
-    ellipse(centerX + distactBetweenEyes, Iy, eyeSize);
+    ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
+    ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);
   }
 
-  ///shrom top dots to know where to place the cruves///
-  /// dots (placements) for a shroom head round ///
+  ///shrom top///
+
    fill(250, 163, 105) /// orange
+  // stroke(199, 72, 34) 
+  // strokeWeight(0.2);
+  
+  //shroomhead Top
+  beginShape();
+  vertex(0, 1);
+  bezierVertex(-2, 1, -4.5, 1, -7.2, 0.5);
+  bezierVertex(-9, -1, -10, -3, -10.5, -5.5);
+  bezierVertex(-9.5, -8, -7.5, -9.5, -4.5, -10.5);
+  bezierVertex(-2, -11, 0, -11.2, 4.5, -10.5);
+  bezierVertex(7.5, -9.5, 9.5, -8, 10.5, -5.5);
+  bezierVertex(10, -3, 9, -1, 7, 0.5);
+  bezierVertex(4.5, 1, 2, 1, 0, 1);
+  endShape();
 
- ellipse(0, 1, 1, 1); /// middle bottom
-
-  //left down to up
-  ellipse(-2, 1, 1, 1); ///  bottom
-  ellipse(-4.5, 1, 1, 1); ///  bottom
-  ellipse(-7, 0.5, 1, 1); ///  bottom
-  ellipse(-9, -1, 1, 1); ///  bottom
-  ellipse(-10, -3, 1, 1); ///  bottom
-  ellipse(-10.5, -5.5, 1, 1); ///  bottom
-  ellipse(-9.5, -8, 1, 1); ///  bottom
-  ellipse(-7.5, -9.5, 1, 1); ///  bottom
-  ellipse(-4.5, -10.5, 1, 1); ///  bottom
-  ellipse(-2, -11, 1, 1); ///  bottom
-  ellipse(0, -11.2, 1, 1); ///  bottom
-  ellipse(4.5, -10.5, 1, 1); ///  bottom
-  ellipse(2, -11, 1, 1); ///  bottom
-  ellipse(7.5, -9.5, 1, 1); ///  bottom
-  ellipse(9.5, -8, 1, 1); ///  bottom
-  ellipse(10.5, -5.5, 1, 1); ///  bottom
-  ellipse(10, -3, 1, 1); ///  bottom
-  ellipse(9, -1, 1, 1); ///  bottom
-  ellipse(7, 0.5, 1, 1); ///  bottom
-  ellipse(4.5, 1, 1, 1); ///  bottom
-  ellipse(2, 1, 1, 1); ///  bottom
-
-  // beginShape();
-  // vertex(0, 1);
-  // bezierVertex(-2, 1, -4.5, 1, -7, 0.5);
-  // bezierVertex(-9, -1, -10, -3, -10.5, -5.5);
-  // bezierVertex(-9.5, -8, -7.5, -9.5, -4.5, -10.5);
-  // bezierVertex(-2, -11, 0, -11.2, 4.5, -10.5);
-  // bezierVertex(7.5, -9.5, 9.5, -8, 10.5, -5.5);
-  // bezierVertex(10, -3, 9, -1, 7, 0.5);
-  // endShape();
-
+  //shroomhead Top Dots
 
 }
 
@@ -95,8 +75,8 @@ function simplePurpleFace() {
   ellipse(0, 0, 20);
   // eyes
   fill(255, 217, 114);
-  ellipse(-3, -3, 3);
-  ellipse( 3, -3, 3);
+  ellipse(-4, -4, 3);
+  ellipse( 4, -4, 3);
 }
 
 /*
