@@ -20,7 +20,7 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   let headSize = 10
   let eyeSize = 2;
   let centerX = 0;
-  let Iy = 4
+  let Iy = 2.5
   let distactBetweenEyes = 2
   
   // rotation in degrees
@@ -35,7 +35,7 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   // 2 traditonal eyes
   if (eye_value === 1 || eye_value == 3) {
     fill(bg_color3);
-    ellipse(centerX, Iy, eyeSize-1,eyeSize);
+    ellipse(centerX, Iy, eyeSize-3,eyeSize);
    
   }
 // middle eye
@@ -62,7 +62,28 @@ function orangeAlienFace(tilt_value, eye_value, mouth_value) {
   ellipse(-7.5, -9.5, 1, 1); ///  bottom
   ellipse(-4.5, -10.5, 1, 1); ///  bottom
   ellipse(-2, -11, 1, 1); ///  bottom
-  ellipse(0, -11, 1, 1); ///  bottom
+  ellipse(0, -11.2, 1, 1); ///  bottom
+  ellipse(4.5, -10.5, 1, 1); ///  bottom
+  ellipse(2, -11, 1, 1); ///  bottom
+  ellipse(7.5, -9.5, 1, 1); ///  bottom
+  ellipse(9.5, -8, 1, 1); ///  bottom
+  ellipse(10.5, -5.5, 1, 1); ///  bottom
+  ellipse(10, -3, 1, 1); ///  bottom
+  ellipse(9, -1, 1, 1); ///  bottom
+  ellipse(7, 0.5, 1, 1); ///  bottom
+  ellipse(4.5, 1, 1, 1); ///  bottom
+  ellipse(2, 1, 1, 1); ///  bottom
+
+  // beginShape();
+  // vertex(0, 1);
+  // bezierVertex(-2, 1, -4.5, 1, -7, 0.5);
+  // bezierVertex(-9, -1, -10, -3, -10.5, -5.5);
+  // bezierVertex(-9.5, -8, -7.5, -9.5, -4.5, -10.5);
+  // bezierVertex(-2, -11, 0, -11.2, 4.5, -10.5);
+  // bezierVertex(7.5, -9.5, 9.5, -8, 10.5, -5.5);
+  // bezierVertex(10, -3, 9, -1, 7, 0.5);
+  // endShape();
+
 
 }
 

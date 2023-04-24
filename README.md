@@ -3,6 +3,5 @@
 ## 2023 MDDN342 Assignment 2: Randomised Collections
 **This is where you talk about your project!**
 
->This starter code is just some simple faces being drawn. 
-
+> Just been working on the shroom top and just done the dots to help me with the placements for the drawshape.
 
