@@ -3,5 +3,6 @@
 ## 2023 MDDN342 Assignment 2: Randomised Collections
 **This is where you talk about your project!**
 
-> Just been working on the shroom top and just done the dots to help me with the placements for the drawshape.
+Adding details to the shrooms havent done the 3rd one yet but shouldnt take too long . Will add maybe a couple more dots then do some little details to make it stand out more.
 
+thinking of adding some shadow on the shroom tops to have more detail.
