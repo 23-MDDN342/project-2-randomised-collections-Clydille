@@ -13,9 +13,11 @@
  * eye_value is an integer number of eyes: either 0, 1, 2, or 3
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
-function orangeAlienFace(tilt_value, eye_value) {
+function orangeAlienFace(tilt_value,eye_value,smalldot_value) {
+  let orange = (43, 27, 26)
+
   const bg_color3 = [248, 255, 125]; ///eyes
-  const fg_color3 = [43, 27, 26]; ///face
+  const fg_color3 = [orange]; ///face
 
   let headSize = 9
   let eyeSize = 1.5;
@@ -24,8 +26,8 @@ function orangeAlienFace(tilt_value, eye_value) {
   let distactBetweenEyes = 2
   
   // rotation in degrees
-  // angleMode(DEGREES);
-  // rotate(tilt_value);
+  angleMode(DEGREES);
+  rotate(tilt_value);
 
  // head
   noStroke();
@@ -44,6 +46,9 @@ function orangeAlienFace(tilt_value, eye_value) {
     ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
     ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);
   }
+
+  let bigdot = 5
+
 
   ///shrom top///
 
@@ -71,14 +76,16 @@ function orangeAlienFace(tilt_value, eye_value) {
   // stroke(247, 139, 111) 
   // strokeWeight(0.1);
 
+  if(smalldot_value>= 1.5){
   ///left 
-  ellipse(-1, -5, 2, 2) /// left little near big right dot
-  ellipse(-5, 0.5, 1.5, 1.5) /// bottom left dot
+  ellipse(-5, 0.5, smalldot_value, smalldot_value) /// bottom left dot
+  ellipse(-1, -5, smalldot_value +0.5, smalldot_value +0.5) /// left little near big right dot
   ellipse(-5.9, -5, 5.5, 5.5) /// bottom left dot
 
   ///right
-  ellipse(3, -3, 5, 5) /// right big dot
-  ellipse(7, -6, 2, 2) /// right big dot
+  ellipse(3, -3, bigdot, bigdot) /// right big dot
+  ellipse(7, -6, smalldot_value +0.5, smalldot_value +0.5) /// right big dot
+}
 
   ///SHADOW
   fill(182, 162, 186) ///shadow color 
@@ -101,7 +108,7 @@ function simplePurpleFace() {
 /*
  * thinness_value ranges from 0-100 and indicates how thin the face is
  */
-function blockyFace(thinness_value, ) {
+function blockyFace(thinness_value) {
   
   const bg_color3 = [248, 255, 125]; ///eyes
   const fg_color3 = [43, 27, 26]; ///face

@@ -18,7 +18,7 @@ function setup () {
 
   // create sliders
   slider1 = createSlider(0, 100, 50);
-  slider2 = createSlider(0, 100, 50);
+  slider2 = createSlider(50, 100, 50);
   slider3 = createSlider(0, 100, 50);
   slider4 = createSlider(0, 100, 50);
   slider5 = createSlider(0, 100, 50);
@@ -86,9 +86,9 @@ function draw () {
   if (mode == '1') {
    // draw face using values mapped from 3 sliders
    let tilt_value = map(s1, 0, 100, -90, 90);
-   let mouth_value = map(s2, 0, 100, 0.5, 10);
    let eye_value = int(map(s3, 0, 100, 1, 3));
-   orangeAlienFace(tilt_value, eye_value, mouth_value);
+   let smalldot_value = map(s2, 0, 100, 1, 2)
+   orangeAlienFace(tilt_value, eye_value, smalldot_value);
   }
 
   if (mode == '2') {
