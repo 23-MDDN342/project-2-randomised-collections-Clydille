@@ -13,7 +13,7 @@
  * eye_value is an integer number of eyes: either 0, 1, 2, or 3
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
-function orangeAlienFace(tilt_value,eye_value,smalldot_value) {
+function orangeAlienFace(tilt_value,eye_value, mediumdot_value) {
   let orange = (43, 27, 26)
 
   const bg_color3 = [248, 255, 125]; ///eyes
@@ -27,7 +27,6 @@ function orangeAlienFace(tilt_value,eye_value,smalldot_value) {
   
   // rotation in degrees
   angleMode(DEGREES);
-  rotate(tilt_value);
 
  // head
   noStroke();
@@ -35,17 +34,14 @@ function orangeAlienFace(tilt_value,eye_value,smalldot_value) {
   ellipse(centerX, Iy, headSize, headSize);
 
   // 2 traditonal eyes
-  if (eye_value === 1 || eye_value == 3) {
     fill(bg_color3);
-    ellipse(centerX2, Iy, eyeSize, eyeSize);
    
-  }
 // middle eye
-  if (eye_value >= 2) {
+
     fill(bg_color3);
     ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
     ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);
-  }
+
 
   let bigdot = 5
 
@@ -73,18 +69,17 @@ function orangeAlienFace(tilt_value,eye_value,smalldot_value) {
 
   //shroomhead Top Dots
   fill(250, 202, 140) /// lighter orange 
-  // stroke(247, 139, 111) 
-  // strokeWeight(0.1);
 
-  if(smalldot_value>= 1.5){
+  if(mediumdot_value>= 1.5){
+
   ///left 
-  ellipse(-5, 0.5, smalldot_value, smalldot_value) /// bottom left dot
-  ellipse(-1, -5, smalldot_value +0.5, smalldot_value +0.5) /// left little near big right dot
+  ellipse(-5, 0.5, mediumdot_value, mediumdot_value) /// bottom left dot
+  ellipse(-1, -5, mediumdot_value +0.5, mediumdot_value +0.5) /// left little near big right dot
   ellipse(-5.9, -5, 5.5, 5.5) /// bottom left dot
 
   ///right
   ellipse(3, -3, bigdot, bigdot) /// right big dot
-  ellipse(7, -6, smalldot_value +0.5, smalldot_value +0.5) /// right big dot
+  ellipse(7, -6, mediumdot_value +0.5, mediumdot_value +0.5) /// right big dot
 }
 
   ///SHADOW
@@ -93,17 +88,6 @@ function orangeAlienFace(tilt_value,eye_value,smalldot_value) {
   ellipse(0, 8.2, 15, 1) /// shadow 
 }
 
-
-function simplePurpleFace() {
-  fill(16, 18, 38);
-  noStroke();
-  // head
-  ellipse(0, 0, 20);
-  // eyes
-  fill(255, 217, 114);
-  ellipse(-4, -4, 3);
-  ellipse( 4, -4, 3);
-}
 
 /*
  * thinness_value ranges from 0-100 and indicates how thin the face is

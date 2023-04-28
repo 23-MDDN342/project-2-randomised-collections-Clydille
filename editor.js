@@ -87,8 +87,8 @@ function draw () {
    // draw face using values mapped from 3 sliders
    let tilt_value = map(s1, 0, 100, -90, 90);
    let eye_value = int(map(s3, 0, 100, 1, 3));
-   let smalldot_value = map(s2, 0, 100, 1, 2)
-   orangeAlienFace(tilt_value, eye_value, smalldot_value);
+   let mediumdot_value = map(s2, 0, 100, 1, 2)
+   orangeAlienFace(tilt_value, eye_value, mediumdot_value);
   }
 
   if (mode == '2') {
