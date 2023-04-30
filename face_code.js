@@ -13,34 +13,45 @@
  * eye_value is an integer number of eyes: either 0, 1, 2, or 3
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
-function orangeAlienFace(tilt_value,eye_value, mediumdot_value) {
-  let orange = (43, 27, 26)
+function orangeAlienFace(mediumdot_value, facecolor_value, eyecolor_value) {
+  let darkred = (43, 27, 26) ///very dark red
+  let yellow = (244, 252, 104) ///eyes
 
-  const bg_color3 = [248, 255, 125]; ///eyes
-  const fg_color3 = [orange]; ///face
+
 
   let headSize = 9
   let eyeSize = 1.5;
   let centerX = 0;
   let Iy = 2.5
   let distactBetweenEyes = 2
-  
-  // rotation in degrees
-  angleMode(DEGREES);
 
  // head
+ if(facecolor_value < darkred){
   noStroke();
-  fill(fg_color3);
+  fill(facecolor_value);
   ellipse(centerX, Iy, headSize, headSize);
+} else{
+  push()
+  noStroke();
+  fill(237, 228, 228); /// white-grayish color
+  ellipse(centerX, Iy, headSize, headSize);
+  pop()
+}
 
-  // 2 traditonal eyes
-    fill(bg_color3);
-   
-// middle eye
-
-    fill(bg_color3);
+  // eyes
+   if(eyecolor_value < yellow ) {
+    fill(eyecolor_value);
+    noStroke()
     ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
     ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);
+} else{
+  push()
+  fill(254, 255, 240);
+  noStroke()
+  ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
+  ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);
+  pop()
+}
 
 
   let bigdot = 5
@@ -54,6 +65,7 @@ function orangeAlienFace(tilt_value,eye_value, mediumdot_value) {
   
   //shroomhead Top
   push()
+  scale(1)
   translate(0, 1)
   beginShape();
   vertex(0, 1);
@@ -95,7 +107,6 @@ function orangeAlienFace(tilt_value,eye_value, mediumdot_value) {
 function blockyFace(thinness_value) {
   
   const bg_color3 = [248, 255, 125]; ///eyes
-  const fg_color3 = [43, 27, 26]; ///face
 
   let headSize = 10
   let eyeSize = 2;
@@ -105,11 +116,10 @@ function blockyFace(thinness_value) {
  
 // head
  noStroke();
-fill(fg_color3);
+fill(darkred);
  ellipse(centerX, Iy, headSize, headSize); 
 
   // eyes
-
     fill(bg_color3);
     ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
     ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);

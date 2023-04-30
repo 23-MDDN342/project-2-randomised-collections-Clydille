@@ -17,8 +17,8 @@ function setup () {
   main_canvas.parent('canvasContainer');
 
   // create sliders
-  slider1 = createSlider(0, 100, 50);
-  slider2 = createSlider(50, 100, 50);
+  slider1 = createSlider(50, 100, 50);
+  slider2 = createSlider(0, 100, 100);
   slider3 = createSlider(0, 100, 50);
   slider4 = createSlider(0, 100, 50);
   slider5 = createSlider(0, 100, 50);
@@ -85,10 +85,10 @@ function draw () {
   push();
   if (mode == '1') {
    // draw face using values mapped from 3 sliders
-   let tilt_value = map(s1, 0, 100, -90, 90);
-   let eye_value = int(map(s3, 0, 100, 1, 3));
-   let mediumdot_value = map(s2, 0, 100, 1, 2)
-   orangeAlienFace(tilt_value, eye_value, mediumdot_value);
+   let mediumdot_value = map(s1, 0, 100, 1, 2)
+   let facecolor_value = map(s2, 50, 100, 50, 100)
+   let eyecolor_value = map(s3, 0, 100, 0, 100)
+   orangeAlienFace( mediumdot_value, facecolor_value, eyecolor_value);
   }
 
   if (mode == '2') {
