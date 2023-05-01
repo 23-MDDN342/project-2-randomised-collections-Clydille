@@ -87,17 +87,11 @@ function draw () {
    // draw face using values mapped from 3 sliders
    let mediumdot_value = map(s1, 0, 100, 1, 2)
    let facecolor_value = map(s2, 50, 100, 50, 100)
-   let eyecolor_value = map(s3, 0, 100, 0, 100)
-   orangeAlienFace( mediumdot_value, facecolor_value, eyecolor_value);
+   let eyecolor_value = map(s3, 50, 100, 50, 100)
+   let top_value = map(s4, 1, 100, 1, 2)
+   orangeAlienFace( mediumdot_value, facecolor_value, eyecolor_value, top_value);
   }
 
-  if (mode == '2') {
-     // let slider value 1 indicate thinness
-     blockyFace(s1);
-  }
-  if (mode == '3') {
-    simplePurpleFace();
-  }
 
   pop();
 

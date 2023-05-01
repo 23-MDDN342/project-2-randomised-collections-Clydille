@@ -3,4 +3,4 @@
 ## 2023 MDDN342 Assignment 2: Randomised Collections
 **This is where you talk about your project!**
 
-doing editor stuff now. just currently trying to get the eye color to change to the color I want 
+got the arrangment workking, not super well done. Will work on more along with changing more things on editor 

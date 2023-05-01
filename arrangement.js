@@ -10,7 +10,7 @@ let lastSwapTime = 0;
 const millisPerSwap = 3000;
 
 // global variables for colors
-const bg_color1 = [71, 222, 219];
+const bg_color1 = [199, 185, 201];
 function setup () {
   // create the drawing canvas, save the canvas element
   let main_canvas = createCanvas(canvasWidth, canvasHeight);
@@ -46,35 +46,36 @@ function draw () {
   noStroke();
 
   // draw a 7x4 grid of faces
-  let w = canvasWidth / 7;
-  let h = canvasHeight / 4;
-  for(let i=0; i<4; i++) {
-    for(let j=0; j<7; j++) {
-      let y = h/2 + h*i;
-      let x = w/2 + w*j;
+  // let w = canvasWidth / 7;
+  // let h = canvasHeight / 4;
+  // for(let i=0; i<4; i++) {
+  //   for(let j=0; j<7; j++) {
+  //     let y = h/2 + h*i;
+  //     let x = w/2 + w*j;
      
         // center face
-        let eye_value = int(random(2,4));
-        let tilt_value = random(-45, 45);
-        let mouth_value = random(3,4);
+        let mediumdot_value = random(1, 2);
+        let facecolor_value = random(2,4);
+        let eyecolor_value = random(1, 2);
+        let top_value = random(1,4);
         let is_cyclops = random(0, 100);
 
         if(is_cyclops < 10) {
-          eye_value = 1;
-          tilt_value = random(-5, 5);
-          mouth_value = random(0, 1.7);
+          mediumdot_value = (1,5 )
+          facecolor_value = (1,5);
+          eyecolor_value = random(1, 5);
+          top_value = random(0, 1.7);
         }
 
         push();
-        translate(x, y);
-        scale(w/25, h/25);
-        
-        orangeAlienFace(tilt_value, eye_value, mouth_value);
+        translate(width/2, height/2);
+        scale(15);
+        orangeAlienFace(mediumdot_value, facecolor_value, eyecolor_value, top_value)
         pop();
       
     }
-  }
-}
+//   }
+// }
 
 function keyTyped() {
   if (key == '!') {
