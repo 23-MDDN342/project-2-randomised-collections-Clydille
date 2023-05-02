@@ -53,19 +53,19 @@ function draw () {
       let x = w/2 + w*j;
       if (i == 0) {
         // center face
-        let mediumdot_value = 2;
+        let dot_value = 2;
         let facecolor_value = random(-45, 45);
         let eyecolor_value = random(1, 3);
         let is_cyclops = random(0, 100);
         if(is_cyclops < 10) {
-          mediumdot_value = 1;
+          dot_value = 1;
           facecolor_value = random(-5, 5);
           eyecolor_value = random(5, 10);
         }
         push();
         translate(x, y);
         scale(w/25, h/25);
-        orangeAlienFace(mediumdot_value, facecolor_value, eyecolor_value, top_value)
+        orangeAlienFace(dot_value, facecolor_value, eyecolor_value, top_value)
         pop();
       }
       else if (i > 0) {

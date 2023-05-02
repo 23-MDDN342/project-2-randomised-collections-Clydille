@@ -13,7 +13,7 @@
  * eye_value is an integer number of eyes: either 0, 1, 2, or 3
  * mouth_value is how open the mouth is and should generally range from 0.5 to 10
  */
-function orangeAlienFace(mediumdot_value, facecolor_value, eyecolor_value, top_value) {
+function orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value) {
   let darkred = (43, 27, 26) ///very dark red
   let yellow = (244, 252, 104) ///eyes
 
@@ -35,13 +35,15 @@ function orangeAlienFace(mediumdot_value, facecolor_value, eyecolor_value, top_v
   ellipse(centerX, Iy, headSize, headSize);
   pop()
 }
-
+ 
   // eyes
-   if(eyecolor_value < darkred ) {
+   if(eyecolor_value < (darkred)) {
+    push()
     noStroke()
-    fill(yellow);
+    fill(eyecolor_value);
     ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
     ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);
+    pop()
 } else{
   push()  
   noStroke()
@@ -60,7 +62,7 @@ function orangeAlienFace(mediumdot_value, facecolor_value, eyecolor_value, top_v
    strokeWeight();
   
   //shroomhead Top
-if(top_value >= 1){
+if(top_value < 1){
   push()
   scale(1)
   translate(0, top_value)
@@ -76,30 +78,38 @@ if(top_value >= 1){
   endShape();
   pop()
     //shroomhead Top Dots
-  fill(250, 202, 140) /// lighter orange 
-
-  if(mediumdot_value>= 1.5){
-
-  ///left 
-  ellipse(-5, 0.5, mediumdot_value, mediumdot_value) /// bottom left dot
-  ellipse(-1, -5, mediumdot_value +0.5, mediumdot_value +0.5) /// left little near big right dot
-  ellipse(-5.9, -5, 5.5, 5.5) /// bottom left dot
-
-  ///right
-  ellipse(3, -3, bigdot, bigdot) /// right big dot
-  ellipse(7, -6, mediumdot_value +0.5, mediumdot_value +0.5) /// right big dot
-}
+  
 } else{
   /// red shroom top
 
   fill(252, 138, 136) /// red
-rect(-10, -10, 20, 12, 5, 5, 1, 1);
-///dots
+  translate()
+  rect(-10, -10, 20, 12, 5, 5, 1, 1);
+
+}
+
+if(dot_value <= -6){
+  ///left 
+
+  fill(250, 202, 140) /// lighter orange 
+  ellipse(-1, dot_value, 2, 2) /// left little near big right dot
+  ellipse(-5, 0.5, 1.5, 1.5) /// bottom left dot
+  ellipse(-5.9, -5, 5.5, 5.5) /// bottom left dot
+
+  ///right
+  ellipse(3, -3, 5, 5) /// right big dot
+  ellipse(7, -6, 2, 2) /// right big dot
+}
+
+else{
+  ///dots
+
 fill(255, 197, 196)
-ellipse(-1, -2, 2, 2) /// left little near big right dot
+ellipse(-1, dot_value -3, 2, 2) /// left little near big right dot
 ellipse(-5, 0.5, 1.5, 1.5) /// bottom left dot
 ellipse(-5.9, -5, 5.5, 5.5) /// top left dot
-  ///right
+
+ ///right
   ellipse(2, -3, 5, 5) /// right big dot
   ellipse(7, -6, 2, 2) /// right big dot
 
@@ -109,5 +119,5 @@ ellipse(-5.9, -5, 5.5, 5.5) /// top left dot
   fill(182, 162, 186) ///shadow color 
   stroke(149, 130, 153) 
   ellipse(0, 8.2, 15, 1) /// shadow 
+
 }
- 

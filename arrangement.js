@@ -45,32 +45,31 @@ function draw () {
   background(bg_color1);
   noStroke();
 
-  // draw a 7x4 grid of faces
-  // let w = canvasWidth / 7;
-  // let h = canvasHeight / 4;
-  // for(let i=0; i<4; i++) {
-  //   for(let j=0; j<7; j++) {
-  //     let y = h/2 + h*i;
-  //     let x = w/2 + w*j;
-     
         // center face
-        let mediumdot_value = random(1, 2);
-        let facecolor_value = random(2,4);
-        let eyecolor_value = random(1, 2);
-        let top_value = random(1,4);
-        let is_cyclops = random(0, 100);
+        let dot_value = random(-11, 3);
+        let facecolor_value = random(100);
+        let eyecolor_value = random(100);
+        let top_value = random(0, 5);
 
-        if(is_cyclops < 10) {
-          mediumdot_value = (1,5 )
-          facecolor_value = (1,5);
-          eyecolor_value = random(1, 5);
-          top_value = random(0, 1.7);
-        }
-
+        ///middle shroom
         push();
         translate(width/2, height/2);
         scale(15);
-        orangeAlienFace(mediumdot_value, facecolor_value, eyecolor_value, top_value)
+        orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value)
+        pop();
+
+        ///left shroom
+        push();
+        translate(width/4.5, height/2);
+        scale(10);
+        orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value)
+        pop();
+
+        ///right shroom
+        push();
+        translate(748, height/2);
+        scale(10);
+        orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value)
         pop();
       
     }
