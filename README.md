@@ -3,4 +3,4 @@
 ## 2023 MDDN342 Assignment 2: Randomised Collections
 **This is where you talk about your project!**
 
-Will just focus on fixing the dots before anything else, then will maybe add more to the arrangement scene.
+Fixed the dots and the eyes from going black, they now go gray. 
