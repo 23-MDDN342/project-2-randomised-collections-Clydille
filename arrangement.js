@@ -46,30 +46,30 @@ function draw () {
   noStroke();
 
         // center face
-        let dot_value = random(-10, 1);
+        let dot_value = int(random(-7,-6));
         let facecolor_value = random(100);
         let eyecolor_value = random(100);
-        let top_value = random(0, 5);
+        let top_value = int(random(0, 2));
 
         ///middle shroom
         push(); 
         translate(width/2, height/2);
         scale(15);
-        orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value)
+        orangeAlienFace(facecolor_value, eyecolor_value, getRandomtops(), getRandomdots())
         pop();
 
         ///left shroom
         push();
         translate(width/4.5, height/2);
         scale(10);
-        orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value)
+        orangeAlienFace(getRandomface(), eyecolor_value, top_value, dot_value)
         pop();
 
         ///right shroom
         push();
         translate(748, height/2);
         scale(10);
-        orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value)
+        orangeAlienFace(getRandomface(), eyecolor_value, top_value, dot_value)
         pop();
       
 
@@ -137,11 +137,24 @@ function draw () {
         circle(175, 500, 100) ///right
         circle(155, 429, 100) ///right
 
-  
        pop()
 
 
     }
+
+    function getRandomdots(){
+      return(int(random(-8,0)))
+    }
+
+    function getRandomtops(){
+      return(int(random(0, 2)))
+    }
+
+    function getRandomface(){
+      return(random(100))
+    }
+
+
 
 function keyTyped() {
   if (key == '!') {

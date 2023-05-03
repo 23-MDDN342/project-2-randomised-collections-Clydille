@@ -17,10 +17,10 @@ function setup () {
   main_canvas.parent('canvasContainer');
 
   // create sliders
-  slider1 = createSlider(20, 50, 50);
-  slider2 = createSlider(0, 100, 50);
-  slider3 = createSlider(0, 100, 50);
-  slider4 = createSlider(2, 50, 100);
+  slider1 = createSlider(0, 50, 100);
+  slider2 = createSlider(0, 100, 100);
+  slider3 = createSlider(0, 100, 100);
+  slider4 = createSlider(0, 100, 100);
   slider5 = createSlider(0, 100, 50);
   slider6 = createSlider(0, 100, 50);
   slider7 = createSlider(0, 100, 50);
@@ -85,7 +85,7 @@ function draw () {
   push();
   if (mode == '1') {
    // draw face using values mapped from 3 sliders
-   let dot_value = map(s1, 1, 100, -9, 3)
+   let dot_value = map(s1, 1, 25, -7, -10)
    let facecolor_value = map(s2, 50, 100, 50, 100)
    let eyecolor_value = map(s3, 50, 100, 50, 100)
    let top_value = map(s4, 1, 100, 1, 2)

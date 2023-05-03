@@ -24,9 +24,9 @@ function orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value) 
   let distactBetweenEyes = 2
 
  // head
- if(facecolor_value < darkred){
+ if(facecolor_value >= darkred){
   noStroke();
-  fill(facecolor_value);
+  fill(darkred);
   ellipse(centerX, Iy, headSize, headSize);
 } else{
   push()
@@ -63,7 +63,7 @@ function orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value) 
 if(top_value < 1){
   push()
   scale(1)
-  translate(0, top_value)
+  translate(0, top_value+2)
   beginShape();
   vertex(0, 1);
   bezierVertex(-2, 1, -4.5, 1, -7, 0.5);
@@ -93,7 +93,7 @@ if(dot_value <= -6){
 
   fill(250, 202, 140) /// lighter orange 
   ellipse(-1, dot_value, 2, 2) /// left little near big right dot
-  ellipse(-5, dot_value + 5, 1.5, 1.5) /// bottom left dot
+  ellipse(-5, dot_value + 6, 1.5, 1.5) /// bottom left dot
   ellipse(-5.9, dot_value +1, 5.5, 5.5) /// bottom left dot
 
   ///right
@@ -107,8 +107,8 @@ else{
 
 fill(255, 197, 196)
 ellipse(-1, dot_value -3, 2, 2) /// left little near big right dot
-ellipse(dot_value, dot_value + 4, 1.5, 1.5) /// bottom left dot
-ellipse(-5.9, dot_value+0.5, 5.5, 5.5) /// top left dot
+ellipse(dot_value, dot_value + 3, 1.5, 1.5) /// bottom left dot
+ellipse(-5.9, dot_value+1, 5.5, 5.5) /// top left dot
 
  ///right
   ellipse(2, -3, 5, 5) /// right big dot
