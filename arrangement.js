@@ -46,7 +46,7 @@ function draw () {
   noStroke();
 
         // center face
-        let dot_value = int(random(-7,-6));
+        let dot_value = int(random(-5, -4));
         let facecolor_value = random(100);
         let eyecolor_value = random(100);
         let top_value = int(random(0, 2));
@@ -62,14 +62,14 @@ function draw () {
         push();
         translate(width/4.5, height/2);
         scale(10);
-        orangeAlienFace(getRandomface(), eyecolor_value, top_value, dot_value)
+        orangeAlienFace(getRandomface(), eyecolor_value, top_value, getRandomdots())
         pop();
 
         ///right shroom
         push();
         translate(748, height/2);
         scale(10);
-        orangeAlienFace(getRandomface(), eyecolor_value, top_value, dot_value)
+        orangeAlienFace(getRandomface(), eyecolor_value, top_value, getRandomdots())
         pop();
       
 

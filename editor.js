@@ -85,9 +85,9 @@ function draw () {
   push();
   if (mode == '1') {
    // draw face using values mapped from 3 sliders
-   let dot_value = map(s1, 1, 25, -7, -10)
+   let dot_value = map(s1, 50, 50, -6, -7)
    let facecolor_value = map(s2, 50, 100, 50, 100)
-   let eyecolor_value = map(s3, 50, 100, 50, 100)
+   let eyecolor_value = map(s3, 1, 100, 1, 50)
    let top_value = map(s4, 1, 100, 1, 2)
    orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value);
   }

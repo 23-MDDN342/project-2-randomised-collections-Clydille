@@ -40,7 +40,7 @@ function orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value) 
    if(eyecolor_value < (darkred)) {
     push()
     noStroke()
-    fill(eyecolor_value);
+    fill(eyecolor_value = yellow);
     ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
     ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);
     pop()
@@ -86,18 +86,19 @@ if(top_value < 1){
 
 }
 
-if(dot_value <= -6){
+if(dot_value <= -4){
 
  //shroomhead Top Dots
   ///left 
 
   fill(250, 202, 140) /// lighter orange 
   ellipse(-1, dot_value, 2, 2) /// left little near big right dot
-  ellipse(-5, dot_value + 6, 1.5, 1.5) /// bottom left dot
-  ellipse(-5.9, dot_value +1, 5.5, 5.5) /// bottom left dot
+  ellipse(-6, dot_value + 5, 1.5, 1.5) /// bottom left dot
+  ellipse(-5.9, dot_value +3, 5.5, 5.5) /// bottom left dot
+  //ellipse(-1, dot_value-2, 2, 2) /// right big dot
 
   ///right
-  ellipse(3, -3, 5, 5) /// right big dot
+  ellipse(3, dot_value +2, 5, 5) /// right big dot
   ellipse(7, -6, 2, 2) /// right big dot
 }
 
@@ -106,13 +107,14 @@ else{
  ///left
 
 fill(255, 197, 196)
-ellipse(-1, dot_value -3, 2, 2) /// left little near big right dot
-ellipse(dot_value, dot_value + 3, 1.5, 1.5) /// bottom left dot
-ellipse(-5.9, dot_value+1, 5.5, 5.5) /// top left dot
+ellipse(-1, dot_value, 2, 2) /// left little near big right dot
+ellipse(dot_value, dot_value + 1, 1.5, 1.5) /// bottom left dot
+ellipse(-5.9, dot_value-2, 5.5, 5.5) /// top left dot
 
  ///right
-  ellipse(2, -3, 5, 5) /// right big dot
+  ellipse(2, dot_value -2, 5, 5) /// right big dot
   ellipse(5, -6, 2, 2) /// right big dot
+  ellipse(7, -1, 2, 2) /// right big dot
 
 }
 
