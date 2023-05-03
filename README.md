@@ -3,4 +3,4 @@
 ## 2023 MDDN342 Assignment 2: Randomised Collections
 **This is where you talk about your project!**
 
-got the arrangment workking, not super well done. Will work on more along with changing more things on editor 
+Decided on adding some shurbs on the arrangement for the now 3 shroom bois. gonna work on them more and add that little shadow, to the shroom head and fix some editor stuff since the dots seem to pop out of frame when put into the arrangement.

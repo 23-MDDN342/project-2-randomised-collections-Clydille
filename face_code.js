@@ -53,8 +53,6 @@ function orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value) 
   pop()
 }
 
-  let bigdot = 5
-
   ///shrom top///
 
    fill(250, 163, 105) /// orange
@@ -77,7 +75,7 @@ if(top_value < 1){
   bezierVertex(4.5, 1, 2, 1, 0, 1);
   endShape();
   pop()
-    //shroomhead Top Dots
+    
   
 } else{
   /// red shroom top
@@ -89,12 +87,14 @@ if(top_value < 1){
 }
 
 if(dot_value <= -6){
+
+ //shroomhead Top Dots
   ///left 
 
   fill(250, 202, 140) /// lighter orange 
   ellipse(-1, dot_value, 2, 2) /// left little near big right dot
-  ellipse(-5, 0.5, 1.5, 1.5) /// bottom left dot
-  ellipse(-5.9, -5, 5.5, 5.5) /// bottom left dot
+  ellipse(-5, dot_value + 5, 1.5, 1.5) /// bottom left dot
+  ellipse(-5.9, dot_value +1, 5.5, 5.5) /// bottom left dot
 
   ///right
   ellipse(3, -3, 5, 5) /// right big dot
@@ -102,16 +102,17 @@ if(dot_value <= -6){
 }
 
 else{
-  ///dots
+ //shroomhead Top Dots
+ ///left
 
 fill(255, 197, 196)
 ellipse(-1, dot_value -3, 2, 2) /// left little near big right dot
-ellipse(-5, 0.5, 1.5, 1.5) /// bottom left dot
-ellipse(-5.9, -5, 5.5, 5.5) /// top left dot
+ellipse(dot_value, dot_value + 4, 1.5, 1.5) /// bottom left dot
+ellipse(-5.9, dot_value+0.5, 5.5, 5.5) /// top left dot
 
  ///right
   ellipse(2, -3, 5, 5) /// right big dot
-  ellipse(7, -6, 2, 2) /// right big dot
+  ellipse(5, -6, 2, 2) /// right big dot
 
 }
 
