@@ -27,12 +27,12 @@ function orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value) 
  if(facecolor_value >= darkred){
   noStroke();
   fill(darkred);
-  ellipse(centerX, Iy, headSize, headSize);
+  ellipse(centerX, Iy+0.5, headSize, headSize);
 } else{
   push()
   noStroke();
   fill(237, 228, 228); /// white-grayish color
-  ellipse(centerX, Iy, headSize, headSize);
+  ellipse(centerX, Iy-0.5, headSize, headSize);
   pop()
 }
  
@@ -48,8 +48,8 @@ function orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value) 
   push()  
   noStroke()
   fill(254, 255, 240);
-  ellipse(centerX - distactBetweenEyes, Iy+1, eyeSize);
-  ellipse(centerX + distactBetweenEyes, Iy+1, eyeSize);
+  ellipse(centerX - distactBetweenEyes, Iy+1.5, eyeSize);
+  ellipse(centerX + distactBetweenEyes, Iy+1.5, eyeSize);
   pop()
 }
 
@@ -95,7 +95,6 @@ if(dot_value <= -4){
   ellipse(-1, dot_value, 2, 2) /// left little near big right dot
   ellipse(-6, dot_value + 5, 1.5, 1.5) /// bottom left dot
   ellipse(-5.9, dot_value +3, 5.5, 5.5) /// bottom left dot
-  //ellipse(-1, dot_value-2, 2, 2) /// right big dot
 
   ///right
   ellipse(3, dot_value +2, 5, 5) /// right big dot

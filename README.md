@@ -3,4 +3,4 @@
 ## 2023 MDDN342 Assignment 2: Randomised Collections
 **This is where you talk about your project!**
 
-Fixed the dots and the eyes from going black, they now go gray. 
+Done some Tidy up and changed a couple things to my code. Made both the face eyes move/change places now as well. Finally mananged to fix the dots poping out. Had to change a bit of how I wanted it to look to fit but could fix if I played around more I rekon. Overall I liked how this project has turned out, do wish I could work on a couple bits more but im happy this one didnt have as much stuff ups I had in the previous one (tho still as fun to do). 
