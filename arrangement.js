@@ -10,7 +10,7 @@ let lastSwapTime = 0;
 const millisPerSwap = 3000;
 
 // global variables for colors
-const bg_color1 = [71, 222, 219];
+const bg_color1 = [199, 185, 201];
 function setup () {
   // create the drawing canvas, save the canvas element
   let main_canvas = createCanvas(canvasWidth, canvasHeight);
@@ -45,36 +45,116 @@ function draw () {
   background(bg_color1);
   noStroke();
 
-  // draw a 7x4 grid of faces
-  let w = canvasWidth / 7;
-  let h = canvasHeight / 4;
-  for(let i=0; i<4; i++) {
-    for(let j=0; j<7; j++) {
-      let y = h/2 + h*i;
-      let x = w/2 + w*j;
-     
         // center face
-        let eye_value = int(random(2,4));
-        let tilt_value = random(-45, 45);
-        let mouth_value = random(3,4);
-        let is_cyclops = random(0, 100);
+        let dot_value = int(random(-5, -4));
+        let facecolor_value = random(100);
+        let eyecolor_value = random(100);
+        let top_value = int(random(0, 2));
 
-        if(is_cyclops < 10) {
-          eye_value = 1;
-          tilt_value = random(-5, 5);
-          mouth_value = random(0, 1.7);
-        }
+        ///middle shroom
+        push(); 
+        translate(width/2, height/2);
+        scale(15);
+        orangeAlienFace(facecolor_value, eyecolor_value, getRandomtops(), getRandomdots())
+        pop();
 
+        ///left shroom
         push();
-        translate(x, y);
-        scale(w/25, h/25);
-        
-        orangeAlienFace(tilt_value, eye_value, mouth_value);
+        translate(width/4.5, height/2);
+        scale(10);
+        orangeAlienFace(getRandomface(), eyecolor_value, top_value, getRandomdots())
+        pop();
+
+        ///right shroom
+        push();
+        translate(748, height/2);
+        scale(10);
+        orangeAlienFace(getRandomface(), eyecolor_value, top_value, getRandomdots())
         pop();
       
+
+        /// SHURBSS
+   
+        push()
+        
+        ///background
+        //grass
+        fill(178, 209, 153) ///light green
+        circle(100, 500, 325) ///left
+        circle(300, 500, 150) ///left
+        circle(760, 500, 250) ///right
+        circle(580, 500, 125) ///right
+
+        ///forground 
+        
+        ///grass
+        fill(128, 163, 100) /// darker green
+        //left bush
+        circle(0, 500, 350) ///left
+        circle(960, 500, 290) ///right
+        //right bush
+        circle(200, 500, 200) ///left
+        circle(760, 500, 190) ///right
+
+        ///highlights top left shurbs
+        fill(163, 199, 133) /// highlight
+        circle(20, 400, 100) ///left
+
+        fill(128, 163, 100) /// darker green
+        circle(25, 415, 100) ///left
+
+        //highlights middle
+        fill(163, 199, 133) /// highlight
+        circle(20, 455, 100) ///left
+        circle(62, 455, 100) ///left
+        circle(115, 490, 100) ///left
+        circle(175, 490, 100) ///left
+
+        ///shadow for highlights
+        fill(128, 163, 100) /// darker green
+        circle(5, 460, 100) ///left
+        circle(60, 470, 100) ///left
+        circle(115, 500, 100) ///left
+        circle(175, 500, 100) ///left
+
+        ///highlights top right shurbs
+        translate(725,65)
+        fill(163, 199, 133) /// highlight
+        circle(20, 400, 100) ///right
+        fill(128, 163, 100) /// darker green
+        circle(25, 415, 100) ///right
+
+        //highlights middle
+        fill(163, 199, 133) /// highlight
+        circle(20, 455, 100) ///right
+        circle(62, 455, 100) ///right
+        circle(150, 420, 100) ///right
+
+        ///shadow for highlights
+        fill(128, 163, 100) /// darker green
+        circle(5, 460, 100) ///right
+        circle(60, 470, 100) ///right
+        circle(175, 500, 100) ///right
+        circle(155, 429, 100) ///right
+
+       pop()
+
+
     }
-  }
-}
+
+    function getRandomdots(){
+      return(int(random(-8,0)))
+    }
+
+    function getRandomtops(){
+      return(int(random(0, 2)))
+    }
+
+    function getRandomface(){
+      return(random(100))
+    }
+
+
 
 function keyTyped() {
   if (key == '!') {

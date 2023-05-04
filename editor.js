@@ -4,7 +4,7 @@
 
 const canvasWidth = 960;
 const canvasHeight = 500;
-const bg_color = [71, 222, 219];
+const bg_color = [199, 185, 201];
 let slider1, slider2, slider3, slider4, slider5;
 let slider6, slider7, slider8, slider9, slider10;
 let faceSelector;
@@ -17,10 +17,10 @@ function setup () {
   main_canvas.parent('canvasContainer');
 
   // create sliders
-  slider1 = createSlider(0, 100, 50);
-  slider2 = createSlider(0, 100, 50);
-  slider3 = createSlider(0, 100, 50);
-  slider4 = createSlider(0, 100, 50);
+  slider1 = createSlider(0, 50, 100);
+  slider2 = createSlider(0, 100, 100);
+  slider3 = createSlider(0, 100, 100);
+  slider4 = createSlider(0, 100, 100);
   slider5 = createSlider(0, 100, 50);
   slider6 = createSlider(0, 100, 50);
   slider7 = createSlider(0, 100, 50);
@@ -85,18 +85,11 @@ function draw () {
   push();
   if (mode == '1') {
    // draw face using values mapped from 3 sliders
-   let tilt_value = map(s1, 0, 100, -90, 90);
-   let mouth_value = map(s2, 0, 100, 0.5, 10);
-   let eye_value = int(map(s3, 0, 100, 1, 3));
-   orangeAlienFace(tilt_value, eye_value, mouth_value);
-  }
-
-  if (mode == '2') {
-     // let slider value 1 indicate thinness
-     blockyFace(s1);
-  }
-  if (mode == '3') {
-    simplePurpleFace();
+   let dot_value = map(s1, 50, 50, -6, -7)
+   let facecolor_value = map(s2, 50, 100, 50, 100)
+   let eyecolor_value = map(s3, 1, 100, 1, 50)
+   let top_value = map(s4, 1, 100, 1, 2)
+   orangeAlienFace(facecolor_value, eyecolor_value, top_value, dot_value);
   }
 
   pop();
